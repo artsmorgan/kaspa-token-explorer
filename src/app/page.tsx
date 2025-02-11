@@ -4,10 +4,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Home() {
-  const [tokenId, setTokenId] = useState<string>("");
+  const [tokenId, setTokenId] = useState("");
   const router = useRouter();
-
-
 
   const handleSearch = () => {
     if (tokenId.trim()) router.push(`/token/${tokenId}`);
@@ -15,12 +13,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-100 dark:bg-gray-900 p-6">
-      {/* Logo */}
       <Image src="/logo.png" alt="Kaspa Logo" width={100} height={100} className="mb-6" />
 
       <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6">Kaspa Token Explorer</h1>
 
-      {/* Search Input (No Autocomplete) */}
       <div className="relative w-80">
         <input
           type="text"
@@ -37,7 +33,6 @@ export default function Home() {
       >
         Search
       </button>
-     
     </div>
   );
 }
