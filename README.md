@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Kaspa Token Explorer
 
-## Getting Started
+A **serverless** token explorer for **Kaspa KRC-20 tokens**, built with **Next.js**, **Tailwind CSS**, and **Cloudflare Pages-compatible**.
 
-First, run the development server:
+## 🛠️ Features
+✅ Fetches **real-time token data** from the Kasplex API  
+✅ Displays **total supply, holders, and latest transactions**  
+✅ **Dark mode** support with Tailwind CSS  
+✅ **Serverless** & deployable to **Cloudflare Pages**  
+✅ **Optimized for static export (`next export`)**  
 
-```bash
+---
+
+## 📌 Prerequisites
+Before starting, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/)
+- [Git](https://git-scm.com/)
+- A [Cloudflare Pages](https://pages.cloudflare.com/) account (for deployment)
+
+---
+
+## 📦 Setup Instructions
+
+### 1️⃣ **Clone the Repository**
+```sh
+git clone https://github.com/artsmorgan/kaspa-token-explorer.git
+cd kaspa-token-explorer
+
+
+### 2️⃣ **Install Dependencies**
+```sh
+npm install
+
+### 3️⃣ **Set Up Environment Variables**
+Create a .env.local file in the root of the project:
+```sh
+NEXT_PUBLIC_KASPA_API_URL=https://api.kasplex.org
+
+### 4️⃣ **Start the Development Server**
+🚀 Running the Project Locally
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5️⃣ **Build the App**
+Building and Exporting for Production
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🌍 Deploying to Cloudflare Pages
+You can deploy the Kaspa Token Explorer to Cloudflare Pages for free.
 
-## Learn More
+### **Set Up Cloudflare Pages**
+Go to Cloudflare Pages
+Click "Create a Project"
+Select "Connect to GitHub" and choose your repository
+Click "Begin Setup"
 
-To learn more about Next.js, take a look at the following resources:
+### **Set Deployment Settings**
+Build Command:
+```sh
+npm run build && npm run export
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
